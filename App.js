@@ -1,16 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {Image, StyleSheet, Text, View } from 'react-native';
+import logo from './assets/cachorro.png';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <div style={styles.div}>
-        <Text style={styles.texto}>Login</Text>
-        <Image
-          source={bola}
-          style={styles.img}
-        />
-      </div>
+      <br>
+      </br>
+      <Image source={logo} style={{ width: '50%', height: '38%' }} />
+      <br>
+      </br>
+      <Text style={styles.nome}>Barbara</Text>
+      <Text style={styles.p}>Cachorro | Fêmea | Adulto | Porte médio</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,25 +19,18 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'grey',
-    textAlign: 'center',
-    //alignItems: 'center',
+    paddingTop: '10%',
+    flex: 2,
+    backgroundColor: '#fff',
+    alignItems: 'center',
     //justifyContent: 'center',
   },
-  div: {
-    //backgroundColor: '#000',
-    height: "20vh",
-    width: "30vw",
-    textAlign: 'center',
+  nome: {
+    fontSize: '40px',
+    color: '#8b008b'
   },
-  img: {
-    height: "20vh",
-    width: "30vw"
-  },
-  texto: {
-    color: '#000',
-    fontSize: "40px"
-  },
+  p: {
+    fontSize: '10px',
+    
+  }
 });
-const form = styles.textinput
